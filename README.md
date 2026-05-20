@@ -10,18 +10,14 @@ I navigate datasheets and reference manuals to bring up peripherals from scratch
 
 ## What I'm working on
 
-Currently building a fault-tolerant thermostat on **STM32F401 + FreeRTOS** with software/hardware watchdog supervision, ARM MPU stack guard and persistent crash reporting over UART.
-
-| RUNNING mode | CONFIG mode | Heating active |
-|:---:|:---:|:---:|
-| ![RUNNING mode](assets/prototype-running.png) | ![CONFIG mode](assets/prototype-config.png) | ![Heating active](assets/prototype-HEAT.png) |
-
+Embedded Linux RFID Access Control System: A minimal Linux image built with Buildroot running on a Raspberry Pi. The system reads RFID cards over SPI (RC522 module), validates access against a local list, and logs every entry event. No cloud dependency or unnecessary packages, purpose-built for a deployment in a commercial product where reliability and a lean footprint matter more than features.
 
 ## Tools I work with
 
 ```
 MCUs & cores     ARM Cortex-M (M0/M3/M4/M7), adaptable to any architecture
-Languages        C, C++, Python (test scripting)
+Embedded Linux   Buildroot, custom Linux images, SPI/I2C peripheral drivers
+Languages        C, C++, Python (scripting, validation, tooling)
 RTOS             FreeRTOS
 Peripherals      UART, SPI, I2C, ADC, PWM, DMA, EXTI, IWDG, MPU
 Toolchain        cross-compilation toolchain (GCC-based), Make, CMake
